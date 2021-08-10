@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
+import Content from './components/Content';
+import Header from './components/Header';
+import Courses from './services/getCourses';
 
 const App = () => {
   return (
     <div>
-      <h1>Welcome to React App</h1>
-      <h3>Date : {new Date().toDateString()}</h3>
+      <Header title="FullStackOpen" />
+      <Content courses={Courses} />
     </div>
   );
 };
